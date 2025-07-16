@@ -15,8 +15,15 @@ while True:
             print(f"Answer: {first_num * second_num}")
         elif operator == "/":
             print(f"Answer: {first_num / second_num}")
+
         else:
             print("Error, Invalid operator")
 
     except ValueError:
         print("Please enter valid number")
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero!")
+
+    restart= input("Do you want to calculate again? (yes/no)").lower()
+    if restart == "no":
+        break
