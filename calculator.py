@@ -12,6 +12,7 @@ while True:
         second_num = float(input("Enter your second number: "))
 
 
+
         if operator == "+":
            result = first_num + second_num
         elif operator == "-":
@@ -25,21 +26,18 @@ while True:
             result = first_num / second_num
 
         else:
-            print("Error, Invalid operator")
+            print("Error, Invalid operator, Please use +, -, *, or /")
             continue
+
+     # history append
+        calculation = f"{first_num} {operator} {second_num} = {result}"
+        print(f"Answer : {result}")
+        history.append(calculation)
+
 
     except ValueError:
         print("Please enter valid number")
-
-        #things to fix: validation for numbers and operators
-
-
-
-    #history append
-    calculation = f"{first_num} {operator} {second_num} = {result}"
-    print(f"Answer :{result}")
-
-    history.append(calculation)
+        continue
 
     #Ask user if they want to see history
     show_history = input("Show calculation history? yes/no: ")
