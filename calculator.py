@@ -84,6 +84,7 @@ while True:
 
 
 
-    restart= input("Do you want to calculate again? (yes/no)").lower()
+    restart= input("\nDo you want to calculate again? (yes/no)").lower()
     if restart == "no":
+        print("Thanks for using the calculator!")
         break
