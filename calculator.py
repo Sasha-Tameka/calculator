@@ -35,6 +35,14 @@ while True:
 
     history.append(calculation)
 
+    #Ask user if they want to see history
+    show_history = input("Show calculation history? yes/no: ")
+    if show_history.lower() == "yes":
+        print(f"\n History Calculation: ")
+        for i, cal in enumerate(history,1):
+            print(f"{i}. {cal}")
+
+
     restart= input("Do you want to calculate again? (yes/no)").lower()
     if restart == "no":
         break
