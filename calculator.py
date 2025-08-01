@@ -48,6 +48,25 @@ while True:
     if remove_history.lower()== "specific":
         if len(history)== 0:
             print("No history to remove")
+        else:
+            print(f"\n History Calculation: ")
+            for i, cal in enumerate(history, 1):
+                print(f"{i}. {cal}")
+
+        #get user's choice of which to remove
+        try:
+            choice = int(input("\nEnter number to remove"))
+            if 1<= choice <= len(history):
+                removed = history.pop(choice - 1)
+                print(f"✓ Removed: {removed}")
+            else:
+                print("Invalid number")
+        except ValueError:
+            print("Please enter a valid number ")
+
+
+
+
 
 
 
