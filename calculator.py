@@ -1,5 +1,9 @@
 #user input (first number, second number, operators)
 
+#History Display
+def history_display():
+    history = []
+
 
 while True:
     try:
@@ -8,13 +12,13 @@ while True:
         operator = input("Enter operator (+, -, *, /): ")
 
         if operator == "+":
-            print(f"Answer: {first_num + second_num}")
+           result = first_num + second_num
         elif operator == "-":
-            print(f"Answer:  {first_num - second_num}")
+            result = first_num - second_num
         elif operator == "*":
-            print(f"Answer: {first_num * second_num}")
+            result= first_num * second_num
         elif operator == "/":
-            print(f"Answer: {first_num / second_num}")
+            result = first_num / second_num
 
         else:
             print("Error, Invalid operator")
