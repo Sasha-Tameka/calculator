@@ -8,8 +8,11 @@ history = []
 while True:
     try:
         first_num = float(input("Enter your first number: "))
+        print("--------------------------")
         operator = input("Enter operator (+, -, *, /): ")
+        print("--------------------------")
         second_num = float(input("Enter your second number: "))
+        print("--------------------------")
 
 
 
@@ -41,11 +44,13 @@ while True:
 
     #Ask user if they want to see history
     show_history = input("Show calculation history? yes/no: ")
+    print("--------------------------")
     if show_history.lower() == "yes":
         if history:
             print(f"\n History Calculation: ")
             for i, cal in enumerate(history,1):
                 print(f"{i}. {cal}")
+                print("--------------------------")
         else:
             print("No history available")
 
