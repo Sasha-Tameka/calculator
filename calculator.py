@@ -40,7 +40,16 @@ while True:
     if show_history.lower() == "yes":
         print(f"\n History Calculation: ")
         for i, cal in enumerate(history,1):
-            print(f"{i}. {cal}")
+             print(f"{i}. {cal}")
+
+    #Ask user if they want to remove history
+    remove_history = input("Would you like to remove history? (all/specific/no):")
+
+    if remove_history.lower()== "specific":
+        if len(history)== 0:
+            print("No history to remove")
+
+
 
 
     restart= input("Do you want to calculate again? (yes/no)").lower()
