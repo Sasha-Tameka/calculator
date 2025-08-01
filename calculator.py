@@ -19,15 +19,21 @@ while True:
         elif operator == "*":
             result= first_num * second_num
         elif operator == "/":
+            if second_num == 0:
+                print("Error: Cannot divide by zero!")
+                continue
             result = first_num / second_num
 
         else:
             print("Error, Invalid operator")
+            continue
 
     except ValueError:
         print("Please enter valid number")
-    except ZeroDivisionError:
-        print("Error: Cannot divide by zero!")
+
+        #things to fix: validation for numbers and operators
+
+
 
     #history append
     calculation = f"{first_num} {operator} {second_num} = {result}"
@@ -55,7 +61,7 @@ while True:
 
         #get user's choice of which to remove
         try:
-            choice = int(input("\nEnter number to remove"))
+            choice = int(input("\nEnter number to remove: "))
             if 1<= choice <= len(history):
                 removed = history.pop(choice - 1)
                 print(f"✓ Removed: {removed}")
