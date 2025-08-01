@@ -42,9 +42,13 @@ while True:
     #Ask user if they want to see history
     show_history = input("Show calculation history? yes/no: ")
     if show_history.lower() == "yes":
-        print(f"\n History Calculation: ")
-        for i, cal in enumerate(history,1):
-             print(f"{i}. {cal}")
+        if history:
+            print(f"\n History Calculation: ")
+            for i, cal in enumerate(history,1):
+                print(f"{i}. {cal}")
+        else:
+            print("No history available")
+
 
     #Ask user if they want to remove history
     remove_history = input("Would you like to remove history? (all/specific/no):")
