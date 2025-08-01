@@ -1,15 +1,16 @@
 #user input (first number, second number, operators)
 
 #History Display
-def history_display():
-    history = []
+
+history = []
 
 
 while True:
     try:
         first_num = float(input("Enter your first number: "))
-        second_num = float(input("Enter your second number: "))
         operator = input("Enter operator (+, -, *, /): ")
+        second_num = float(input("Enter your second number: "))
+
 
         if operator == "+":
            result = first_num + second_num
@@ -27,6 +28,12 @@ while True:
         print("Please enter valid number")
     except ZeroDivisionError:
         print("Error: Cannot divide by zero!")
+
+    #history append
+    calculation = f"{first_num} {operator} {second_num} = {result}"
+    print(f"Answer :{result}")
+
+    history.append(calculation)
 
     restart= input("Do you want to calculate again? (yes/no)").lower()
     if restart == "no":
